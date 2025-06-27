@@ -1,0 +1,967 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background-color: black;
+    color: white;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #F7F7F7;
+}
+
+.nav{
+    width: 100%;
+    padding: 1.5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 99 ;
+    position: fixed;
+}
+
+.nav .nav-part1{
+    height: 5.4vw;
+    overflow: hidden;
+}
+
+.nav-part1 svg{
+    display: block;
+}
+
+
+
+.nav .nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.nav-part2 .link{
+    display: flex;
+    gap: 5vw;
+}
+
+.link a{
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+    font-size: .8vw;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.link a:hover{
+    color: rgba(0, 0, 0, 0.612);
+    text-decoration: underline;
+    font-weight: 550;
+}
+
+.icon{
+    display: flex;
+    gap: 4vw;
+    padding:1vw 2vw;
+    background-color: #F7F7F7;
+    border-radius: 10vw;
+}
+
+.bubble{
+    width: 15vw;
+    height: 15vw;
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 3vh;
+    padding-top: 28vh;
+}
+
+.heading{
+    overflow: hidden;
+}
+
+ .heading h1{
+    font-size: 15.8vw;
+    font-family: "Futura";
+    text-transform: uppercase;
+    letter-spacing: -.5vw;
+    line-height: 14vw;
+    z-index: 9;
+}
+
+.videoContainer{
+    width: 100%;
+    height: 100vh;
+    margin-top: 3vh;
+    position: relative;
+    cursor: pointer;
+}
+
+.videoContainer video{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+}
+
+.videoContainer .cursor{
+    background-color: black;
+    height: 1vh;
+    color: white;
+    width: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2.5vw;
+    border-radius: 50%;
+    position: fixed;
+    opacity: 0;
+    scale: 0;
+}
+
+.cursor h4{
+    font-size: 1.2vw;
+    font-family: "Futura";
+}
+
+.page1-half{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6vw;
+    text-align: center;
+}
+
+.page1-half h1{
+    font-family: Futura;
+    font-size: 3.6vw;
+    text-transform: uppercase;
+    letter-spacing: 0vw;
+    line-height: 3.6vw;
+}
+
+.page1-half h4{
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.714);
+    font-family: Calibri;
+    margin-top: 2vw;
+}
+
+
+
+.good{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    padding: 0 3vh;
+    margin-top: 13vh;
+}
+.good h5{
+    font-family: Calibri;
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.811);
+}
+.line{
+    margin-left:1.3vw ;
+    margin-right: 1.3vw;
+    border-top: 1px solid black;
+}
+
+.page2{
+    width: 100%;
+    height: 100vh;
+    padding: 0 3vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    margin-top: 1.5vw;
+}
+
+.elem{
+    width: 35%;
+    height: 100%;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.301);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+.elem .block{
+    position: absolute;
+    height: 6.5vh;
+    width: 60%;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1vw 2vw;
+    gap: 2vw;
+    color: rgba(0, 0, 0, 0.684);
+    background-color: #dcc0b4;
+   
+
+}
+
+.elem .block:hover{
+      height: 40vh;
+}
+
+
+
+.block h4{
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 1vw;
+}
+
+
+
+.block i{
+    font-size: 1.4vw;
+    
+}
+
+.block .dot{
+    width: .5vw;
+    z-index: 9;
+    height: .5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+
+.page3{
+    width: 100%;
+    height: 45vh;
+    padding: 0 3vh;
+}
+
+.page3 .parts{
+    margin-top: 6.5vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 3vw;
+    width: 100%;
+    height: 100%;
+}
+
+.parts .left{
+    width: 70%;
+}
+
+.left h1{
+    font-family: Futura;
+    font-size: 3.6vw;
+    text-transform: uppercase;
+    letter-spacing: 0vw;
+    line-height: 3.6vw;
+}
+
+.parts .right{
+    width: 30%;
+    margin-right: 10vw;
+}
+
+
+.right p{
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.714);
+    line-height: 1.4vw;
+    font-family: Calibri;
+}
+
+.para{
+    margin-top: 1.5vw;
+}
+
+.shop{
+    width: 7.5vw;
+    border-bottom: 1.8px solid black;
+}
+.shop h4{
+    margin-bottom: .5vw;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.732);
+    font-size: .9vw;
+    margin-top: 4vw;
+    cursor: pointer;
+
+}
+
+.page4{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 3vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* gap: 3vw; */
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.page4 .child{
+    width: 47%;
+    height: 96vh;
+}
+
+.child img{
+    width: 85%;
+    object-fit: cover;
+    height: 85%;
+}
+
+.child h4{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9vw;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.688);
+    text-transform: uppercase;
+}
+
+.child h5{
+    text-align: center;
+    margin-top: .5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7vw;
+    font-weight: 300;
+}
+
+#child3 h4, #child4 h4{
+    margin-top: 4vw;
+}
+
+.next{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    padding: 0 3vh;
+    margin-top: 15vh;
+}
+.next h5{
+    font-family: Calibri;
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.811);
+}
+
+.page5{
+    width: 100%;
+    height: 100vh;
+    margin-top: 8vw;
+    padding: 0 3vh;
+}
+
+.page5 .msg{
+    text-align: center;
+}
+
+.msg h1{
+    font-family: Futura;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    letter-spacing: 0vw;
+    line-height: 4.4vw;
+}
+
+.page5 .button{
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button button{
+    padding: 1.5vw 5vw;
+    border: none;
+    border-radius: 10vw;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: .9vw;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+.button button:hover{
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.button button:active{
+    scale: .98;
+}
+
+.page5 h3{
+    margin-top: 3vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.864);
+}
+
+
+.page6{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 3vh;
+
+}
+
+.page6 .top{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 4vw;
+}
+
+.top .impact, .top .image{
+    width: 50%;
+}
+.contain{
+    display: flex;
+    gap: 2vw;
+}
+
+.impact h3{
+    font-family: Futura;
+    font-size: 1.8vw;
+    font-weight: 550;
+    text-transform: uppercase;
+    margin-bottom: 2.5vw;
+}
+
+.impact p{
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 1.4vw;
+    font-family: arial;
+    margin-bottom: 3vw;
+    margin-right: 2vw;
+}
+
+.how{
+    width: 9vw;
+    border-bottom: 1.8px solid black;
+}
+.how h4{
+    margin-bottom: .5vw;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.732);
+    font-size: .9vw;
+    margin-top: 4vw;
+    cursor: pointer;
+
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page6 .last{
+    margin-top: 12vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 5vw;
+    height: 100%;
+}
+
+.last .contact, .last .gretty{
+    width: 10%;
+}
+
+.last .diagram{
+    width: 80%;
+}
+
+.contact h4{
+    font-size: .8vw;
+    color: gray;
+    font-family: arial;
+    font-weight: 400;
+    margin-bottom: 2vw;
+
+}
+
+.contact h4::selection{
+    color: white;
+    background-color: gray;
+}
+
+.contact a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-family:Arial;
+    font-size: .9vw;
+    font-weight: 550;
+
+}
+
+.contact a:hover{
+    color: gray;
+}
+
+.gretty h4{
+    font-size: .8vw;
+    color: gray;
+    font-family: arial;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+
+.gretty h4::selection{
+    color: white;
+    background-color: gray;
+}
+
+.gretty a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-family:Arial;
+    font-size: .9vw;
+    font-weight: 550;
+}
+
+.gretty a:hover{
+    color: gray;
+}
+
+.last .diagram{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.diagram svg{
+    width: 30%;
+    height: 30%;
+    margin-bottom:5vw ;
+}
+
+.diagram .terms{
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+.terms h4{
+    font-size: .9vw;
+    color: gray;
+    font-family: arial;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+
+.terms h4::selection{
+    color: white;
+    background-color: gray;
+}
+
+.diagram p{
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1.4vw;
+    font-family: arial;
+    margin-bottom: 3vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 7vw;
+}
+
+
+
+
+
+@media (max-width:500px) {
+    .nav{
+        padding: 4vw;
+        height: 30vw;
+    }
+
+    .nav .nav-part1{
+        height: 100%;
+        width: 50vw;
+        
+    }
+
+
+    .nav-part2 .link{
+        display: none;
+    }
+    .icon{
+        gap: 20vw;
+        font-size: 20px;
+   }
+
+    .page1{
+        padding: 0 3vh;
+        padding-top: 32vh;
+        min-height: 50vh;
+    }
+    .heading h1{
+        font-size: 14.5vw;
+        line-height: 13vw;
+    }
+    .videoContainer{
+        height: 35vh;
+        margin-top: 1.5vh;
+    }
+
+   .videoContainer .cursor{
+        height: 5vh;
+        width: 5vh;
+        padding: 3vw;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .page1-half{
+       margin-top: 17vw;   
+    }
+
+    .page1-half h1{
+        font-family: Futura;
+        font-size: 10vw;
+        margin-right: 10vw;
+        margin-left: 10vw;
+
+        line-height: 12vw;
+        
+    }
+
+    .page1-half h4{
+        font-size: 4vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-top: 6vw;
+    }
+
+    .cursor h4{
+        font-size: 3.2vw;
+    }
+    .good{
+        padding: 0 2vh;
+        margin-top: 7vh;
+     }
+    .good h5{
+        font-size: 4vw;
+    }
+    .line{
+        margin-left:3vw ;
+        margin-right: 3vw;
+    }
+    .page2{
+       min-height: 250vh;
+       padding: 0 2vh;
+       margin-top: 5vw;
+       flex-direction: column;
+       gap: 2vh;
+   }
+    .elem{
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.301);
+        overflow: hidden;
+
+    }
+    .elem .block{
+        position: absolute;
+        height: 7vh;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 4vw;
+    }
+
+    .elem .block:hover{
+      height: 7vh;
+    }
+
+    .block h4{
+        font-size: 4.2vw;
+   }
+   .block .dot{
+        width: 1.9vw;
+        height: 1.9vw;
+   }
+
+    .block i{
+        font-size: 6vw;
+        
+    }
+
+    .page3{
+        height: 50vh;
+        padding: 0 2vh;
+    }
+
+    .page3 .parts{
+        margin-top: 35vw;
+        display: flex;
+        flex-direction: column;
+        gap: 6vw;
+        text-align: center;
+    }
+
+    .parts .left{
+        width: 100%;
+    }
+
+    .left h1{
+        font-size: 6.9vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        letter-spacing: 0vw;
+        line-height: 9vw;
+    }
+
+    .parts .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .right p{
+        font-size: 4.5vw;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.714);
+        line-height: 5.5vw;
+        font-family: Calibri;
+    }
+
+    .shop{
+        width: 30vw;
+        border-bottom: 1.4px solid black;
+    }
+
+    .shop h4{
+        font-size: 3.5vw;
+        margin-top: 9vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .page4{
+        width: 100%;
+        min-height: 50vh;
+        padding:6vh 4vh;
+        display: flex;
+        align-items: flex-start;
+        gap: 1vw;
+        flex-wrap: wrap;
+        cursor: pointer;
+        margin-top: 25vw;
+    }
+
+    .page4 .child{
+        width: 42%;
+        height: 20vh;
+    }
+
+    .child img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .child h4{
+        font-size: 3.3vw;
+        font-weight: 550;
+    }
+
+
+    .child h5{
+        margin-top: 1vw;
+        font-size: 3.4vw;
+    }
+    #child3, #child4{
+        margin-top: 45vw;
+    }
+
+
+    #child3 h4, #child4 h4{
+        margin-top: 5vw;
+        
+    }
+
+    .next{
+        padding: 0 2vh;
+    }
+    .next h5{
+        font-size: 3.5vw;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.811);
+        margin-bottom: 3vw;
+    }
+    .page5{
+        margin-top: 40vw;
+        height: max-content;
+    }
+
+    .msg h1{
+        font-family: Futura;
+        font-size: 7vw;
+        text-transform: uppercase;
+        letter-spacing: 0vw;
+        line-height: 8vw;
+    }
+
+    .page5 .button{
+        margin-top: 10vw;
+    }
+
+    .button button{
+        padding: 6vw 7vw ;
+        width: 100%;
+        font-size: 3.5vw;
+    }
+
+    .page5 h3{
+        margin-top: 8vw;
+        font-size: 4vw;
+    }
+
+    .page6{
+        padding: 0 2vh;
+        margin-top: 15vw;
+    }
+
+    .page6 .top{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .top .impact, .top .image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contain{
+        display: flex;
+        gap: 4vw; 
+    }
+
+    .impact h3{
+        font-size: 6.5vw;
+        margin-bottom: 7vw;
+    }
+
+    .impact p{
+        font-size: 4vw;
+        font-weight: 400;
+        line-height: 6vw;
+        font-family: arial;
+        margin-bottom: 8vw;
+        margin-right: 0vw;
+    }
+
+    .how{
+        width: 35vw;
+        border-bottom: 1px solid black;
+    }
+
+    .how h4{
+        margin-bottom: 1vw;
+        font-size: 3.5vw;
+        margin-top: 5vw;
+    }
+
+    .page6 .last{
+        margin-top: 30vw;
+        width: 100%;
+        height: 100%;
+        display: inline;
+    }
+
+    .last .contact, .last .gretty{
+        opacity: 0;
+    }
+
+    .last .diagram{
+        width: 100%;
+    }
+
+    .diagram svg{
+        width: 40%;
+        height: 40%;
+        margin-bottom:6vw ;
+    }
+
+    .diagram .terms{
+        display: flex;
+        gap: 5vw;
+    }
+
+    .terms h4{
+        font-size: 2.5vw;
+        color: gray;
+        margin-bottom: 3vw;
+    }
+
+
+    .diagram p{
+        font-size: 4vw;
+        font-weight: 400;
+        line-height: 5vw;
+        font-family: arial;
+        margin-top: 2vw;
+        margin-bottom: 10vw;
+    }
+
+
+
+
+
+
+
+
+
+
+    
+}
